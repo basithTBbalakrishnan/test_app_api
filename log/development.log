@@ -1,0 +1,2293 @@
+Started GET "/" for 127.0.0.1 at 2022-04-19 13:59:40 +0530
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/namitha/.rvm/gems/ruby-2.6.1/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/namitha/.rvm/gems/ruby-2.6.1/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.7ms | Allocations: 473)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 2584)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-04-19 13:59:40 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/namitha/.rvm/gems/ruby-2.6.1/bin/rake:23)
+  [1m[35m (236.0ms)[0m  [1m[35mCREATE DATABASE "my_test_api" ENCODING = 'utf8'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "my_test_api" ENCODING = 'utf8'[0m
+  [1m[35m (27.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7929548313544796715)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220419090134)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password" character varying, "email" character varying, "user_api_token" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220419090134"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-04-19 09:01:47.598874"], ["updated_at", "2022-04-19 09:01:47.598874"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7929548313544796715)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-04-19 14:54:35 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/namitha/.rvm/gems/ruby-2.6.1/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/namitha/.rvm/gems/ruby-2.6.1/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.1ms | Allocations: 310)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 1564)
+
+
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/namitha/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started GET "/" for 127.0.0.1 at 2022-04-19 15:14:03 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/namitha/.rvm/gems/ruby-2.6.1/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/namitha/.rvm/gems/ruby-2.6.1/gems/railties-6.0.4.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.9ms | Allocations: 310)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 1564)
+
+
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/namitha/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started GET "/api/v1/users" for ::1 at 2022-04-19 15:19:28 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (undefined local variable or method `only' for Api::V1::UsersController:Class):
+  
+app/controllers/api/v1/users_controller.rb:3:in `<class:UsersController>'
+app/controllers/api/v1/users_controller.rb:1:in `<main>'
+Started GET "/api/v1/users" for ::1 at 2022-04-19 15:20:05 +0530
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 0.0ms | Allocations: 3533)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:20:55 +0530
+  
+ActionController::RoutingError (uninitialized constant Api::V1::RegistrationsController):
+  
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:24:00 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant Api::V1::RegistrationsController):
+  
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/namitha/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:27:39 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+Zeitwerk::NameError (expected file /home/namitha/Documents/AptanaStudio3Workspace/my_test_app/app/controllers/api/v1/registrations_controller.rb to define constant Api::V1::RegistrationsController, but didn't):
+  
+zeitwerk (2.5.4) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.5.4) lib/zeitwerk/kernel.rb:28:in `require'
+activesupport (6.0.4.7) lib/active_support/inflector/methods.rb:284:in `const_get'
+activesupport (6.0.4.7) lib/active_support/inflector/methods.rb:284:in `block in constantize'
+activesupport (6.0.4.7) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.4.7) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.4.7) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.4.7) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:89:in `controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/parameters.rb:100:in `binary_params_for?'
+actionpack (6.0.4.7) lib/action_dispatch/http/parameters.rb:91:in `set_binary_encoding'
+actionpack (6.0.4.7) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:47:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:28:27 +0530
+Processing by Api::V1::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}, "registration"=>{"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}}}
+Completed 422 Unprocessable Entity in 20ms (Views: 0.2ms | ActiveRecord: 3.3ms | Allocations: 11926)
+
+
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/namitha/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:31:25 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}, "registration"=>{"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}}}
+Completed 422 Unprocessable Entity in 20ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 8753)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:31:55 +0530
+Processing by Api::V1::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}, "registration"=>{"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2022-04-19 10:01:55.149118"], ["updated_at", "2022-04-19 10:01:55.149118"]]
+  [1m[35m (11.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 15.7ms | Allocations: 11355)
+
+
+  
+NameError (undefined local variable or method `encrypted_password' for #<User:0x0000556852cbdeb8>):
+  
+activemodel (6.0.4.7) lib/active_model/attribute_methods.rb:432:in `method_missing'
+devise (4.8.1) lib/devise/models/database_authenticatable.rb:177:in `authenticatable_salt'
+devise (4.8.1) lib/devise/models/authenticatable.rb:238:in `serialize_into_session'
+devise (4.8.1) lib/devise.rb:485:in `block (2 levels) in configure_warden!'
+warden (1.2.9) lib/warden/session_serializer.rb:27:in `store'
+warden (1.2.9) lib/warden/proxy.rb:187:in `set_user'
+devise (4.8.1) lib/devise/controllers/sign_in_out.rb:53:in `sign_in'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:106:in `sign_up'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:24:in `create'
+actionpack (6.0.4.7) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.4.7) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.4.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.4.7) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.4.7) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.4.7) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.4.7) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.4.7) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4.7) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4.7) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.4.7) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.4.7) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.4.7) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.4.7) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.4.7) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.4.7) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4.7) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:35:28 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}}
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 2.7ms | Allocations: 9606)
+
+
+  
+NoMethodError (undefined method `encrypted_password=' for #<User:0x0000563173e01b90>):
+  
+app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7929548313544796715)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEncryptedPassForUser (20220419100757)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7929548313544796715)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7929548313544796715)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEncryptedPassForUser (20220419100757)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220419100757"]]
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7929548313544796715)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:42:49 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user1"], ["email", "user1@gmail.com"], ["created_at", "2022-04-19 10:12:49.728852"], ["updated_at", "2022-04-19 10:12:49.728852"], ["encrypted_password", "$2a$12$zYJ6Go0smzs5Vutk4WuebeJoJsipEA08sJZeK05kColg2wteXveXy"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[35m (14.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+Completed 404 Not Found in 295ms (Views: 0.1ms | ActiveRecord: 18.0ms | Allocations: 10396)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/api/v1/users_controller.rb:26:in `create_user_api_token'
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:46:22 +0530
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user1"], ["email", "user1@gmail.com"], ["created_at", "2022-04-19 10:16:22.496014"], ["updated_at", "2022-04-19 10:16:22.496014"], ["encrypted_password", "$2a$12$2Dq/tV5DiSb9TT5D7bLUkebMLqH4dd/NGbb/FfWoDMPZbGAToSRs6"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+Completed 404 Not Found in 260ms (Views: 0.1ms | ActiveRecord: 6.1ms | Allocations: 8741)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/api/v1/users_controller.rb:26:in `create_user_api_token'
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:48:11 +0530
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user1"], ["email", "user1@gmail.com"], ["created_at", "2022-04-19 10:18:11.733494"], ["updated_at", "2022-04-19 10:18:11.733494"], ["encrypted_password", "$2a$12$2zmzSzB/uDQm3KksR0uWgebuos0ip6jCASnOODBC88/PlFJNJsgda"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:25:in `create_user_api_token'
+Completed 404 Not Found in 280ms (Views: 0.2ms | ActiveRecord: 16.8ms | Allocations: 9285)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=user1@gmail.com):
+  
+app/controllers/api/v1/users_controller.rb:25:in `create_user_api_token'
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:49:01 +0530
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user1"], ["email", "user1@gmail.com"], ["created_at", "2022-04-19 10:19:01.708619"], ["updated_at", "2022-04-19 10:19:01.708619"], ["encrypted_password", "$2a$12$fVMmHfFEZXfQvKMYipzGkuE0l6Cwavj8TTuEyZ0r4xkNLQc5WX2xa"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:25:in `create_user_api_token'
+Completed 404 Not Found in 271ms (Views: 0.1ms | ActiveRecord: 6.9ms | Allocations: 9251)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=user1@gmail.com):
+  
+app/controllers/api/v1/users_controller.rb:25:in `create_user_api_token'
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:50:34 +0530
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user1"], ["email", "user1@gmail.com"], ["created_at", "2022-04-19 10:20:34.460436"], ["updated_at", "2022-04-19 10:20:34.460436"], ["encrypted_password", "$2a$12$fgetcs/1s.Yg1ZdLyEzP7OzR6KQcVdhyK6Yw3KVD6Or0xyRqy5uZe"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:25:in `create_user_api_token'
+Completed 404 Not Found in 261ms (Views: 0.1ms | ActiveRecord: 6.1ms | Allocations: 9220)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=user1@gmail.com):
+  
+app/controllers/api/v1/users_controller.rb:25:in `create_user_api_token'
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:51:15 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user1"], ["email", "user1@gmail.com"], ["created_at", "2022-04-19 10:21:15.990635"], ["updated_at", "2022-04-19 10:21:15.990635"], ["encrypted_password", "$2a$12$BEJK.ERlQ/ErN4.jNlYQ5OzsuYTRf4tFPOWLC9MS4GZtMxvAn.Ti2"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[35m (9.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:25:in `create_user_api_token'
+Completed 404 Not Found in 283ms (Views: 0.1ms | ActiveRecord: 14.3ms | Allocations: 10880)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=user1@gmail.com):
+  
+app/controllers/api/v1/users_controller.rb:25:in `create_user_api_token'
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:52:07 +0530
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user1"], ["email", "user1@gmail.com"], ["created_at", "2022-04-19 10:22:07.972915"], ["updated_at", "2022-04-19 10:22:07.972915"], ["encrypted_password", "$2a$12$iTA676SGQIuVlWpzQvvk1utRc6.u7gMr2YqAkIX53ZAxNZx5U21ya"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:25:in `create_user_api_token'
+Completed 500 Internal Server Error in 270ms (Views: 0.1ms | ActiveRecord: 7.4ms | Allocations: 9622)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/controllers/api/v1/users_controller.rb:28:in `create_user_api_token'
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:54:35 +0530
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user1"], ["email", "user1@gmail.com"], ["created_at", "2022-04-19 10:24:36.058930"], ["updated_at", "2022-04-19 10:24:36.058930"], ["encrypted_password", "$2a$12$IogslY3l45StuFZgAMr4FeS1Gg6H7mUpMoY4LDgXszjbNBZH6h7m6"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:25:in `create_user_api_token'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:29:in `create_user_api_token'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "user_api_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["user_api_token", "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwiZXhwIjoxNjU1NTQ3ODc2fQ.h74tB5fQJVMAoC7CWel15G7JsHNLAO92YmwpQ_9OtO0"], ["updated_at", "2022-04-19 10:24:36.067627"], ["id", 9]]
+  ↳ app/controllers/api/v1/users_controller.rb:29:in `create_user_api_token'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:29:in `create_user_api_token'
+Completed 200 OK in 278ms (Views: 0.1ms | ActiveRecord: 11.1ms | Allocations: 11819)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:54:51 +0530
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user1"], ["email", "user1@gmail.com"], ["created_at", "2022-04-19 10:24:51.398655"], ["updated_at", "2022-04-19 10:24:51.398655"], ["encrypted_password", "$2a$12$L6QFMOLSY5ONQ9pRUXlwGuMoRTMdn4EQxSrApEs8x5DXWRVpI0U3K"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:25:in `create_user_api_token'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:29:in `create_user_api_token'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "user_api_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["user_api_token", "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAsImV4cCI6MTY1NTU0Nzg5MX0.dxyNB958D73fVLJOU0vIq6DpAn2icvDf1xJrpBZgd6Y"], ["updated_at", "2022-04-19 10:24:51.416834"], ["id", 10]]
+  ↳ app/controllers/api/v1/users_controller.rb:29:in `create_user_api_token'
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:29:in `create_user_api_token'
+Completed 200 OK in 269ms (Views: 0.1ms | ActiveRecord: 16.9ms | Allocations: 5562)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-04-19 15:58:43 +0530
+Processing by Api::V1::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"user2", "password"=>"[FILTERED]", "email"=>"user2@gmail.com"}, "registration"=>{"user"=>{"username"=>"user2", "password"=>"[FILTERED]", "email"=>"user2@gmail.com"}}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2022-04-19 10:28:43.285932"], ["updated_at", "2022-04-19 10:28:43.285932"]]
+  [1m[35m (9.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 12.5ms | Allocations: 11195)
+
+
+  
+NoMethodError (undefined method `current_sign_in_at' for #<User:0x00007ff06cd912a0>):
+  
+activemodel (6.0.4.7) lib/active_model/attribute_methods.rb:432:in `method_missing'
+devise (4.8.1) lib/devise/models/trackable.rb:21:in `update_tracked_fields'
+devise (4.8.1) lib/devise/models/trackable.rb:39:in `update_tracked_fields!'
+devise (4.8.1) lib/devise/hooks/trackable.rb:9:in `block in <main>'
+warden (1.2.9) lib/warden/hooks.rb:15:in `block in _run_callbacks'
+warden (1.2.9) lib/warden/hooks.rb:10:in `each'
+warden (1.2.9) lib/warden/hooks.rb:10:in `_run_callbacks'
+warden (1.2.9) lib/warden/manager.rb:52:in `_run_callbacks'
+warden (1.2.9) lib/warden/proxy.rb:191:in `set_user'
+devise (4.8.1) lib/devise/controllers/sign_in_out.rb:53:in `sign_in'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:106:in `sign_up'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:24:in `create'
+actionpack (6.0.4.7) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.4.7) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.4.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.4.7) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.4.7) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.4.7) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.4.7) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.4.7) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4.7) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4.7) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.4.7) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.4.7) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.4.7) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.4.7) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.4.7) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.4.7) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4.7) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/users" for ::1 at 2022-04-19 16:00:59 +0530
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"user2", "password"=>"[FILTERED]", "email"=>"user2@gmail.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user2"], ["email", "user2@gmail.com"], ["created_at", "2022-04-19 10:31:00.135899"], ["updated_at", "2022-04-19 10:31:00.135899"], ["encrypted_password", "$2a$12$OhoiwvmOc.c/ojVYC63swu2DA0POLnbOnTliSZgtFO.8mYk27gjdS"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[35m (9.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user2@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:25:in `create_user_api_token'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:29:in `create_user_api_token'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "user_api_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["user_api_token", "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTIsImV4cCI6MTY1NTU0ODI2MH0.7IwKeQOpR3zbIkFsvJnHC8CFcoGO_W82yh0dWBxMKY8"], ["updated_at", "2022-04-19 10:31:00.150810"], ["id", 12]]
+  ↳ app/controllers/api/v1/users_controller.rb:29:in `create_user_api_token'
+  [1m[35m (10.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:29:in `create_user_api_token'
+Completed 200 OK in 280ms (Views: 0.1ms | ActiveRecord: 23.9ms | Allocations: 11764)
+
+
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/namitha/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started POST "/api_v1_user_session" for ::1 at 2022-04-19 16:05:50 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/api_v1_user_session"):
+  
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/users" for ::1 at 2022-04-19 16:06:09 +0530
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"user2", "password"=>"[FILTERED]", "email"=>"user2@gmail.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user2"], ["email", "user2@gmail.com"], ["created_at", "2022-04-19 10:36:10.264087"], ["updated_at", "2022-04-19 10:36:10.264087"], ["encrypted_password", "$2a$12$FNXE8vA0TfZPkXZcMLZL8uaoSGJJbZc44chnFzG8zXxjVQrq28oam"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user2@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:25:in `create_user_api_token'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:29:in `create_user_api_token'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "user_api_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["user_api_token", "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTIsImV4cCI6MTY1NTU0ODU3MH0.NmdIb-TgCOvjBUJHM6y9f3LgaH7FROZSd1hRtxylB04"], ["updated_at", "2022-04-19 10:36:10.273633"], ["id", 12]]
+  ↳ app/controllers/api/v1/users_controller.rb:29:in `create_user_api_token'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:29:in `create_user_api_token'
+Completed 200 OK in 274ms (Views: 0.1ms | ActiveRecord: 11.3ms | Allocations: 13536)
+
+
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/namitha/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started POST "//api/v1/users/login" for ::1 at 2022-04-19 16:09:26 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+   "username": "user1",
+   "password":123456,
+}
+Started POST "/api/v1/users/login" for ::1 at 2022-04-19 16:10:07 +0530
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+   "username": "user1",
+   "password":123456,
+}
+Started POST "/api/v1/users/login" for ::1 at 2022-04-19 16:10:10 +0530
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+   "username": "user1",
+   "password":123456,
+}
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/namitha/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started POST "/api/v1/users/login" for ::1 at 2022-04-19 16:21:21 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+Zeitwerk::NameError (expected file /home/namitha/Documents/AptanaStudio3Workspace/my_test_app/app/controllers/sessions_controller.rb to define constant SessionsController, but didn't):
+  
+zeitwerk (2.5.4) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.5.4) lib/zeitwerk/kernel.rb:28:in `require'
+activesupport (6.0.4.7) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.4.7) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.4.7) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.4.7) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.4.7) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.4.7) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:89:in `controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/parameters.rb:100:in `binary_params_for?'
+actionpack (6.0.4.7) lib/action_dispatch/http/parameters.rb:91:in `set_binary_encoding'
+actionpack (6.0.4.7) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:47:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+   "username": "user1",
+   "password":123456,
+}
+Started POST "/api/v1/users/login" for ::1 at 2022-04-19 16:22:59 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/users/login"):
+  
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+   "username": "user1",
+   "password":123456,
+}
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/namitha/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started POST "/users/login" for ::1 at 2022-04-19 16:26:27 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+Zeitwerk::NameError (expected file /home/namitha/Documents/AptanaStudio3Workspace/my_test_app/app/controllers/sessions_controller.rb to define constant SessionsController, but didn't):
+  
+zeitwerk (2.5.4) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.5.4) lib/zeitwerk/kernel.rb:28:in `require'
+activesupport (6.0.4.7) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.4.7) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.4.7) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.4.7) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.4.7) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.4.7) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:89:in `controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/parameters.rb:100:in `binary_params_for?'
+actionpack (6.0.4.7) lib/action_dispatch/http/parameters.rb:91:in `set_binary_encoding'
+actionpack (6.0.4.7) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:47:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+   "username": "user1",
+   "password":123456,
+}
+Started POST "/users/login" for ::1 at 2022-04-19 16:26:46 +0530
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+   "username": "user1",
+   "password":123456,
+}
+Started POST "/users/login" for ::1 at 2022-04-19 16:29:59 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Error occurred while parsing request parameters.
+Contents:
+
+{
+   "username": "user1",
+   "password":123456,
+}
+Processing by SessionsController#create as */*
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 477)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+   "username": "user1",
+   "password":123456,
+}'):
+  
+app/controllers/application_controller.rb:13:in `configure_permitted_parameters'
+Started POST "/users/login" for ::1 at 2022-04-19 16:32:11 +0530
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+   "username": "user1",
+   "password":123456,
+}
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/namitha/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started POST "/users/login" for ::1 at 2022-04-19 16:34:59 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+   "username": "user1",
+   "password":"123456",
+}
+Started POST "/users/login" for ::1 at 2022-04-19 16:35:22 +0530
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+   "username": "user1",
+   "password":"123456",
+}
+Started POST "/users/login" for ::1 at 2022-04-19 16:37:49 +0530
+Error occurred while parsing request parameters.
+Contents:
+
+{
+   "username": "user1",
+   "password":"123456",
+}
+Processing by SessionsController#create as */*
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 482)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+   "username": "user1",
+   "password":"123456",
+}'):
+  
+app/controllers/application_controller.rb:13:in `configure_permitted_parameters'
+Started POST "/users/login" for ::1 at 2022-04-19 16:38:24 +0530
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"user1", "password"=>"[FILTERED]", "session"=>{"username"=>"user1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 18ms (Views: 0.3ms | ActiveRecord: 3.7ms | Allocations: 10439)
+
+
+Started POST "/users/login" for ::1 at 2022-04-19 16:39:23 +0530
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"user2", "password"=>"[FILTERED]", "session"=>{"username"=>"user2", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 971)
+
+
+Started POST "/users/login" for ::1 at 2022-04-19 16:40:22 +0530
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"user1@gmail.com", "password"=>"[FILTERED]", "session"=>{"username"=>"user1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 954)
+
+
+Started POST "/users/login" for ::1 at 2022-04-19 16:40:34 +0530
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"user1@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"user1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+  Rendering sessions/create.json.jbuilder
+  Rendered sessions/create.json.jbuilder (Duration: 0.8ms | Allocations: 261)
+Completed 200 OK in 260ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 5139)
+
+
+Started POST "/users/login" for ::1 at 2022-04-19 16:41:15 +0530
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users/login" for ::1 at 2022-04-19 16:54:18 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/users/login"):
+  
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/namitha/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started POST "/api/v1/users/login" for ::1 at 2022-04-19 16:55:41 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/users/login" for ::1 at 2022-04-19 16:56:49 +0530
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.4.7) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.7) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users/login" for ::1 at 2022-04-19 16:59:10 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/users/login"):
+  
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users/login" for ::1 at 2022-04-19 16:59:28 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/users/login"):
+  
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users/login" for ::1 at 2022-04-19 17:00:10 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/users/login"):
+  
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users/login" for ::1 at 2022-04-19 17:00:11 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/users/login"):
+  
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users/login" for ::1 at 2022-04-19 17:00:57 +0530
+  
+NameError (uninitialized constant Users):
+  
+app/controllers/sessions_controller.rb:1:in `<main>'
+Started POST "/users/login" for ::1 at 2022-04-19 17:01:32 +0530
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"user1@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"user1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+  Rendering sessions/create.json.jbuilder
+  Rendered sessions/create.json.jbuilder (Duration: 0.4ms | Allocations: 261)
+Completed 200 OK in 264ms (Views: 1.3ms | ActiveRecord: 4.2ms | Allocations: 9136)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7929548313544796715)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePhonenumbers (20220419114044)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "phonenumbers" ("id" bigserial primary key, "phonenumber" integer, "user_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220419114044"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7929548313544796715)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/namitha/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:22:27 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>1111111111, "user_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[36mPhonenumber Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 6.8ms | Allocations: 14864)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:23:14 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>1111111111, "user_id"=>1}}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 3)
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 3820)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:23:52 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>1111111111, "user_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[36mPhonenumber Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 4383)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:25:44 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>1111111111, "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[36mPhonenumber Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+Completed 200 OK in 12ms (Views: 1.0ms | ActiveRecord: 1.1ms | Allocations: 4323)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:27:01 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111113", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[36mPhonenumber Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111113], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 4307)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:34:18 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111113", "user_id"=>"1"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[36mPhonenumber Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111113], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+Completed 200 OK in 30ms (Views: 4.1ms | ActiveRecord: 1.6ms | Allocations: 8756)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:34:36 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"11111111", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[36mPhonenumber Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 11111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 4310)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:35:12 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 8.3ms | Allocations: 8135)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:35:31 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:21:in `create'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 5.7ms | Allocations: 8058)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:39:20 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mPhonenumber Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+Completed 200 OK in 26ms (Views: 0.1ms | ActiveRecord: 6.0ms | Allocations: 9189)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7929548313544796715)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to LimitOfPhonenumber (20220419121515)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.0ms)[0m  [1m[35mALTER TABLE "phonenumbers" ALTER COLUMN "phonenumber" TYPE bigint[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220419121515"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7929548313544796715)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:47:21 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mPhonenumber Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 6.1ms | Allocations: 13397)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:47:23 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mPhonenumber Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 4364)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:47:24 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mPhonenumber Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 4363)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:47:24 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mPhonenumber Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 4363)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:47:25 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mPhonenumber Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 4363)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:47:26 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mPhonenumber Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 4350)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:48:16 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mPhonenumber Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 4344)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:48:17 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mPhonenumber Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 4344)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:48:18 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mPhonenumber Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 4344)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:50:04 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 6.6ms | Allocations: 8138)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:51:10 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 7.4ms | Allocations: 7448)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:51:12 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3357)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:51:41 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.0ms | Allocations: 40783)
+
+
+  
+NoMethodError (undefined method `authenticate_user' for #<Api::V1::PhonenumbersController:0x00007f9d98651098>
+Did you mean?  authenticate_user!):
+  
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.4.7) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.4.7) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.4.7) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.4.7) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.4.7) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4.7) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4.7) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.4.7) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.4.7) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.4.7) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.4.7) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.4.7) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.4.7) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4.7) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:52:00 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 6.1ms | Allocations: 7282)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:52:02 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:22:in `create'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 3210)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:54:04 +0530
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for Api::V1::PhonenumbersController):
+  
+actionpack (6.0.4.7) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.4.7) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.4.7) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4.7) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.7) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.7) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.7) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.7) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:58:16 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"1111111111", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 4.8ms | Allocations: 7242)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 17:58:23 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"11111111121", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 3170)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 18:09:07 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"11111111121", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mPhonenumber Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 11111111121], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 8.2ms | Allocations: 12532)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 18:10:22 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"11111111121", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mPhonenumber Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 11111111121], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+No template found for Api::V1::PhonenumbersController#create, rendering head :no_content
+Completed 204 No Content in 23ms (ActiveRecord: 7.4ms | Allocations: 10581)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 18:11:35 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"11111111121", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mPhonenumber Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 11111111121], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+No template found for Api::V1::PhonenumbersController#create, rendering head :no_content
+Completed 204 No Content in 21ms (ActiveRecord: 1.3ms | Allocations: 6379)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 18:12:50 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"11111111121", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mPhonenumber Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 11111111121], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+No template found for Api::V1::PhonenumbersController#create, rendering head :no_content
+Completed 204 No Content in 29ms (ActiveRecord: 5.6ms | Allocations: 14596)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 18:14:02 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 259)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: phonenumber):
+  
+app/controllers/api/v1/phonenumbers_controller.rb:13:in `phonenumber_params'
+app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 18:15:09 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"11111111121", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mPhonenumber Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 11111111121], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+No template found for Api::V1::PhonenumbersController#create, rendering head :no_content
+Completed 204 No Content in 5ms (ActiveRecord: 0.9ms | Allocations: 4380)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 18:27:41 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"11111111121", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mPhonenumber Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 11111111121], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 8095)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 18:32:26 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>"11111111121", "user_id"=>"1"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mPhonenumber Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 11111111121], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 8.8ms | Allocations: 8453)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 18:32:35 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>"11111111121", "user_id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1133)
+
+
+  
+NoMethodError (undefined method `permit' for "11111111121":String):
+  
+app/controllers/api/v1/phonenumbers_controller.rb:17:in `phonenumber_params'
+app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 18:33:06 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>1111111111, "user_id"=>1}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mPhonenumber Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 4275)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 18:33:12 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>1111111111, "user_id"=>2}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mPhonenumber Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "phonenumbers" WHERE "phonenumbers"."phonenumber" = $1 LIMIT $2[0m  [["phonenumber", 1111111111], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 4275)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 18:33:32 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>1111111111, "user_id"=>2}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 7.0ms | Allocations: 7429)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-04-19 18:35:36 +0530
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]", "email"=>"user1@gmail.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user1"], ["email", "user1@gmail.com"], ["created_at", "2022-04-19 13:05:36.773210"], ["updated_at", "2022-04-19 13:05:36.773210"], ["encrypted_password", "$2a$12$h76Si/0wK8dBAdugsxvFVeIsKbR6NVflv3tnp72oGR3F7V4gVav2u"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:25:in `create_user_api_token'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:27:in `create_user_api_token'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "user_api_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["user_api_token", "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTQsImV4cCI6MTY1NTU1NzUzNn0.5H26j5RXiNdHbd-XELFh9NubS9MzGikzN0UI9wJTP3k"], ["updated_at", "2022-04-19 13:05:36.783213"], ["id", 14]]
+  ↳ app/controllers/api/v1/users_controller.rb:27:in `create_user_api_token'
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:27:in `create_user_api_token'
+Completed 200 OK in 271ms (Views: 0.1ms | ActiveRecord: 7.9ms | Allocations: 11495)
+
+
+Started POST "/api/v1/phonenumbers" for ::1 at 2022-04-19 18:37:16 +0530
+Processing by Api::V1::PhonenumbersController#create as */*
+  Parameters: {"phonenumber"=>{"phonenumber"=>1111111111, "user_id"=>14}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[36mPhonenumber Create (0.7ms)[0m  [1m[32mINSERT INTO "phonenumbers" ("phonenumber", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["phonenumber", 1111111111], ["user_id", 14], ["created_at", "2022-04-19 13:07:16.045546"], ["updated_at", "2022-04-19 13:07:16.045546"]]
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/phonenumbers_controller.rb:6:in `create'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 5.0ms | Allocations: 3871)
+
+
